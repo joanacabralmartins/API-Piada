@@ -13,6 +13,10 @@ function loadJoke() {
                 `;
             }
         })
+        .catch(error => {
+            console.error('Ocorreu um erro ao carregar a piada:', error);
+            jokeContainer.innerHTML = '<p>Erro ao carregar piada.</p>';
+        });
 }
 
 const loadJokeButton = document.getElementById('loadJoke'); 
